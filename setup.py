@@ -16,22 +16,17 @@ from setuptools import setup
 
 
 def read(*names, **kwargs):
-    with io.open(
-        join(dirname(__file__), *names),
-        encoding=kwargs.get('encoding', 'utf8')
-    ) as fh:
+    with open('README.md','r') as fh:
         return fh.read()
 
 
 setup(
     name='pdfextractor',
-    version='0.0.1',
+    version='1.0',
     license='BSD-2-Clause',
     description='This Project Extract Images,Text and Tables from a single package',
-    long_description='%s\n%s' % (
-        re.compile('^.. start-badges.*^.. end-badges', re.M | re.S).sub('', read('README.rst')),
-        re.sub(':[a-z]+:`~?(.*?)`', r'``\1``', read('CHANGELOG.rst'))
-    ),
+    long_description=read(),
+    long_description_content_type = 'text/markdown',
     author='Shehroz Kapoor',
     author_email='shehrozkapoor@gmail.com',
     url='https://https://github.com/shehrozkapoor/PDFEXTRACTOR.git/shehrozkapoor/PDFEXTRACTOR',
