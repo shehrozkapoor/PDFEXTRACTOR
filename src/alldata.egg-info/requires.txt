@@ -1,0 +1,10 @@
+pip
+tabula-py
+camelot-py[cv]
+PyPDF2
+PyMuPDF
+pillow
+numpy
+spacy
+pdfminer
+pdfminer.six
